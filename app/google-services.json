@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "416445540946",
+    "project_id": "re-firebase-a43dd",
+    "storage_bucket": "re-firebase-a43dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416445540946:android:272fa70f301005aa9acd8b",
+        "android_client_info": {
+          "package_name": "com.example.refirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416445540946-rvv8i3rsn2t800mp7p8v1bbet09j0mk9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuG08CvnjthjgRwkknaozKTXtN2YoAyXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416445540946-rvv8i3rsn2t800mp7p8v1bbet09j0mk9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
