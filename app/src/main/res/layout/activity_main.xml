@@ -10,8 +10,8 @@
     <ImageView
         android:id="@+id/logo"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_100sdp"
-        android:layout_marginTop="@dimen/_50sdp" />
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_10sdp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,10 +30,54 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_8sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            app:neumorph_shadowColorLight="#E0F7FF"
+            app:neumorph_shadowColorDark="#E0F7FF"
             app:neumorph_shadowElevation="@dimen/_5sdp"
-            app:neumorph_shapeType="basin"
+            app:neumorph_strokeColor="#E0F7FF"
+            app:neumorph_strokeWidth="@dimen/_1sdp">
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:background="@null"
+                android:hint="Name"
+                android:minHeight="@dimen/_35sdp"
+                android:textSize="@dimen/_12sdp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            app:neumorph_shadowColorDark="#E0F7FF"
+            app:neumorph_shadowElevation="@dimen/_5sdp"
+            app:neumorph_strokeColor="#E0F7FF"
+            app:neumorph_strokeWidth="@dimen/_1sdp">
+
+            <EditText
+                android:id="@+id/surname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:background="@null"
+                android:hint="Surname"
+                android:minHeight="@dimen/_35sdp"
+                android:textSize="@dimen/_12sdp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            app:neumorph_shadowColorDark="#E0F7FF"
+            app:neumorph_shadowElevation="@dimen/_5sdp"
             app:neumorph_strokeColor="#E0F7FF"
             app:neumorph_strokeWidth="@dimen/_1sdp">
 
@@ -44,8 +88,10 @@
                 android:layout_margin="@dimen/_8sdp"
                 android:background="@null"
                 android:hint="Email"
-                android:minHeight="48dp"
-                android:textSize="@dimen/_12sdp" />
+                android:inputType="textEmailAddress"
+                android:minHeight="@dimen/_35sdp"
+                android:textSize="@dimen/_12sdp"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
         </soup.neumorphism.NeumorphCardView>
 
@@ -54,9 +100,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_8sdp"
-            app:neumorph_shadowColorLight="#E0F7FF"
+            app:neumorph_shadowColorDark="#E0F7FF"
             app:neumorph_shadowElevation="@dimen/_5sdp"
-            app:neumorph_shapeType="basin"
             app:neumorph_strokeColor="#E0F7FF"
             app:neumorph_strokeWidth="@dimen/_1sdp">
 
@@ -67,7 +112,8 @@
                 android:layout_margin="@dimen/_8sdp"
                 android:background="@null"
                 android:hint="Password"
-                android:minHeight="48dp"
+                android:inputType="textPassword"
+                android:minHeight="@dimen/_35sdp"
                 android:textSize="@dimen/_12sdp" />
 
         </soup.neumorphism.NeumorphCardView>
@@ -77,9 +123,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_8sdp"
-            app:neumorph_shadowColorLight="#E0F7FF"
+            app:neumorph_shadowColorDark="#E0F7FF"
             app:neumorph_shadowElevation="@dimen/_5sdp"
-            app:neumorph_shapeType="basin"
             app:neumorph_strokeColor="#DAF5FF"
             app:neumorph_strokeWidth="@dimen/_1sdp">
 
@@ -90,8 +135,10 @@
                 android:layout_margin="@dimen/_8sdp"
                 android:background="@null"
                 android:hint="Confirm Password"
-                android:minHeight="48dp"
-                android:textSize="@dimen/_12sdp" />
+                android:inputType="textPassword"
+                android:minHeight="@dimen/_35sdp"
+                android:textSize="@dimen/_12sdp"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
         </soup.neumorphism.NeumorphCardView>
 
@@ -101,8 +148,8 @@
             android:layout_width="@dimen/_180sdp"
             android:layout_height="@dimen/_50sdp"
             android:layout_gravity="center"
-            android:gravity="center"
             android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
             android:text="SIGN UP"
             app:neumorph_shapeType="basin"
             app:neumorph_strokeColor="@color/black"
