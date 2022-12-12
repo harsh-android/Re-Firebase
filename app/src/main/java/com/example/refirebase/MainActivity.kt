@@ -1,5 +1,6 @@
 package com.example.refirebase
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -53,6 +54,7 @@ class MainActivity : BaseActivity() {
                                     var model = UserModel(key!!,name, surname, email, password)
                                     reference.root.child("User").child(key).setValue(model)
                                     closeDialog()
+                                    startActivity(Intent(applicationContext,UserListActivity::class.java))
 
                                 }.addOnFailureListener { error ->
                                 binding.txtMsg.text = "User Register is Failed Please Retry Again!"
