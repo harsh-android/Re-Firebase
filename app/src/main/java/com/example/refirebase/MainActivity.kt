@@ -35,7 +35,9 @@ class MainActivity : BaseActivity() {
         reference = FirebaseDatabase.getInstance().getReference()
 
         Glide.with(applicationContext).load(logoUrl).into(binding.logo)
-
+        binding.userList.setOnClickListener {
+            startActivity(Intent(applicationContext, UserListActivity::class.java))
+        }
         binding.logo.setOnClickListener {
             var intent = Intent(ACTION_GET_CONTENT)
             intent.type = "image/*"
@@ -59,7 +61,7 @@ class MainActivity : BaseActivity() {
                                     binding.txtMsg.text = "User is Register Successfully"
                                     binding.txtMsg.setTextColor(Color.GREEN)
 
-                                    UploadData(name,surname,email,password)
+                                    UploadData(name, surname, email, password)
 
                                 }.addOnFailureListener { error ->
                                     binding.txtMsg.text =
@@ -99,7 +101,7 @@ class MainActivity : BaseActivity() {
             if (task.isSuccessful) {
                 val downloadUri = task.result
                 var key = reference.root.push().key
-                var model = UserModel(key!!, name, surname, email, password,downloadUri.toString())
+                var model = UserModel(key!!, name, surname, email, password, downloadUri.toString())
                 reference.root.child("User").child(key).setValue(model)
                 closeDialog()
                 startActivity(Intent(applicationContext, UserListActivity::class.java))
@@ -108,7 +110,6 @@ class MainActivity : BaseActivity() {
                 // ...
             }
         }
-
 
 
     }
