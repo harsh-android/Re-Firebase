@@ -101,6 +101,8 @@ class MainActivity : BaseActivity() {
                 var key = reference.root.push().key
                 var model = UserModel(key!!, name, surname, email, password,downloadUri.toString())
                 reference.root.child("User").child(key).setValue(model)
+                closeDialog()
+                startActivity(Intent(applicationContext, UserListActivity::class.java))
             } else {
                 // Handle failures
                 // ...
@@ -108,8 +110,7 @@ class MainActivity : BaseActivity() {
         }
 
 
-        closeDialog()
-        startActivity(Intent(applicationContext, UserListActivity::class.java))
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
