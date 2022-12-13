@@ -23,6 +23,7 @@ class UserListActivity : AppCompatActivity() {
 
         reference.root.child("User").addValueEventListener(object :ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
+                arrayList.clear()
                 for (snap in snapshot.children) {
                     var model = snap.getValue(UserModel::class.java)
                     arrayList.add(model!!)
